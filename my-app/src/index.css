@@ -1,0 +1,268 @@
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010; }
+  .app .white-outer-container {
+    z-index: 1;
+    position: absolute;
+    z-index: 1;
+    width: calc(100%);
+    height: calc(100vh);
+    background-color: white; }
+  .app .big-outer-container {
+    z-index: 1;
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 180px);
+    height: calc(100vh - 180px);
+    background-color: black; }
+  .app .outer-container {
+    z-index: 2;
+    width: calc(100% - 180px);
+    height: calc(100vh - 180px);
+    margin: 90px;
+    background-color: #101010; }
+    .app .outer-container .home {
+      background-color: #060606;
+      width: 100%;
+      height: 100%; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s; }
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+.slideInUp {
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s; }
+
+.home .name-container {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+  .home .name-container .text {
+    margin: 0 auto; }
+    .home .name-container .text h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 1000;
+      font-size: 60px;
+      letter-spacing: 15px;
+      color: #fff; }
+    .home .name-container .text p {
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 8px;
+      font-weight: 600;
+      color: #999999; }
+
+.app .nav-div {
+  width: 100%;
+  height: 100%; }
+.app nav {
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-color: transparent !important;
+  position: absolute !important; }
+  .app nav ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between; }
+  .app nav .color-black {
+    color: #000 !important; }
+  .app nav a {
+    color: #fff !important;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 1px; }
+
+.black-slider {
+  width: 100%;
+  height: 100%;
+  background-color: #060606; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-duration: 1s; }
+
+/* The animation code */
+@keyframes outer-slide {
+  0% {
+    width: calc(100% - 180px);
+    height: calc(100vh - 180px); }
+  100% {
+    width: 100%;
+    height: 100%; } }
+@keyframes outer-slide-in {
+  0% {
+    width: 100%;
+    height: 100%; }
+  100% {
+    width: calc(100% - 180px);
+    height: calc(100vh - 180px); } }
+.outer-slide {
+  animation-name: outer-slide;
+  animation-fill-mode: forwards;
+  animation-duration: 1s; }
+
+.outer-slide-in {
+  animation-name: outer-slide-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s; }
+
+.projects {
+  width: 100%;
+  height: 100%; }
+  .projects .carousel {
+    width: 100%;
+    height: 100%; }
+    .projects .carousel .carousel-control-next-icon {
+      background-image: url(./img/arrow.svg);
+      width: 100px;
+      height: 20px; }
+    .projects .carousel .carousel-control-prev-icon {
+      background-image: url(./img/left-arrow.svg);
+      width: 100px;
+      height: 20px; }
+    .projects .carousel .carousel-inner {
+      height: 100%; }
+      .projects .carousel .carousel-inner .carousel-item {
+        height: 100%; }
+        .projects .carousel .carousel-inner .carousel-item .custom-slide {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center; }
+          .projects .carousel .carousel-inner .carousel-item .custom-slide .slide-info-container {
+            width: 50%; }
+          .projects .carousel .carousel-inner .carousel-item .custom-slide .slide-info {
+            width: 80%;
+            height: 100%; }
+            .projects .carousel .carousel-inner .carousel-item .custom-slide .slide-info h3 {
+              font-family: 'Raleway', sans-serif;
+              font-size: 60px;
+              margin-bottom: 20px;
+              font-weight: 550; }
+            .projects .carousel .carousel-inner .carousel-item .custom-slide .slide-info p {
+              margin-bottom: 40px;
+              font-family: 'Roboto Slab', serif; }
+            .projects .carousel .carousel-inner .carousel-item .custom-slide .slide-info a {
+              position: relative;
+              top: 10vh;
+              font-size: 25px;
+              color: #fff;
+              font-family: 'Roboto Slab', serif; }
+    .projects .carousel .tags {
+      margin-bottom: 40px; }
+      .projects .carousel .tags span {
+        background-color: #fff;
+        padding: 10px;
+        color: #000;
+        font-family: 'Roboto Slab', serif;
+        margin-right: 20px;
+        font-weight: 600; }
+    .projects .carousel .slide-info {
+      color: #fff; }
+    .projects .carousel .slide-1-img {
+      background-image: url(./img/ecommerce.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: calc(50% - 70px) !important;
+      height: calc(100% - 70px);
+      margin: 35px; }
+    .projects .carousel .slide-2-img {
+      background-image: url(./img/rentabike.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: calc(50% - 70px) !important;
+      height: calc(100% - 70px);
+      margin: 35px; }
+    .projects .carousel .slide-3-img {
+      background-image: url(./img/movies.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: calc(50% - 70px) !important;
+      height: calc(100% - 70px);
+      margin: 35px; }
+
+.layer {
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* The animation code */
+@keyframes inner-slide {
+  0% {
+    width: 0px; }
+  100% {
+    width: calc(60% - 180px); } }
+.inner-slide {
+  animation-name: inner-slide;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+  .about .slider {
+    position: absolute;
+    right: 90px;
+    width: 0px;
+    height: calc(100% - 180px);
+    background-color: #fff; }
+  .about .img {
+    width: calc(45% - 80px);
+    height: calc(100% - 80px);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 40px; }
+  .about .text {
+    z-index: 1;
+    width: 55%;
+    height: 100%;
+    color: #101010;
+    font-size: 35px; }
+    .about .text p {
+      margin-top: 5%;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: 'Roboto Slab', serif; }
+
+/*# sourceMappingURL=index.css.map */

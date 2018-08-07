@@ -243,7 +243,7 @@ body {
     .projects .carousel .slide-info {
       color: #fff; }
     .projects .carousel .slide-1-img {
-      background-image: url(./img/ecommerce.png);
+      background-image: url(./img/ecommerce.jpg);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -251,7 +251,7 @@ body {
       height: calc(100% - 70px);
       margin: 35px; }
     .projects .carousel .slide-2-img {
-      background-image: url(./img/rentabike.png);
+      background-image: url(./img/rentabike.jpg);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -259,7 +259,7 @@ body {
       height: calc(100% - 70px);
       margin: 35px; }
     .projects .carousel .slide-3-img {
-      background-image: url(./img/movies.png);
+      background-image: url(./img/movies.jpg);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -351,7 +351,7 @@ body {
   color: #000; }
 
 .color-white {
-  color: #fff; }
+  color: #fff !important; }
 
 .active {
   border-bottom: 1px solid #4c4c4c; }

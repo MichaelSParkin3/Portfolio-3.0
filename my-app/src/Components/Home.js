@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      black: false,
+      home: false,
+      about: false,
+      projects: false
+    };
+  }
   render() {
     return (
       <div className="home">

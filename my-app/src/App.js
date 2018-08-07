@@ -20,7 +20,10 @@ class App extends Component {
     super(props);
 
     this.state = {
-      black: false
+      black: false,
+      home: false,
+      about: false,
+      projects: false
     };
 
     this.child = React.createRef();
@@ -35,6 +38,9 @@ class App extends Component {
             navChange={this.onNavChange}
             ref={this.child}
             black={this.state.black}
+            home={this.state.home}
+            about={this.state.about}
+            projects={this.state.projects}
           />
           <div className="white-outer-container" />
           <div
@@ -63,7 +69,7 @@ class App extends Component {
       </Router>
     );
   }
-  onNavChange() {
+  onNavChange(path) {
     console.log(this.state.black);
     const currentState = this.state.black;
     this.setState({ black: !currentState });

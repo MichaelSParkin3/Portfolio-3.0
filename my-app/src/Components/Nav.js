@@ -13,7 +13,10 @@ export default class Nav extends Component {
     super(props);
 
     this.state = {
-      black: false
+      black: false,
+      home: false,
+      about: false,
+      projects: false
     };
 
     this.transition = this.transition.bind(this);
@@ -29,7 +32,7 @@ export default class Nav extends Component {
             }
             to="/"
           >
-            M
+            MIII
           </Link>
           <button
             className="navbar-toggler"
@@ -49,7 +52,11 @@ export default class Nav extends Component {
                 onClick={() => {
                   this.transition('home');
                 }}
-                className="nav-item active"
+                className={
+                  this.state.home
+                    ? 'nav-item active hvr-float-shadow'
+                    : 'nav-item hvr-float-shadow'
+                }
               >
                 <Link
                   className={
@@ -64,7 +71,11 @@ export default class Nav extends Component {
                 onClick={() => {
                   this.transition('projects');
                 }}
-                className="nav-item"
+                className={
+                  this.state.projects
+                    ? 'nav-item active hvr-float-shadow'
+                    : 'nav-item hvr-float-shadow'
+                }
               >
                 <Link
                   className={
@@ -79,7 +90,11 @@ export default class Nav extends Component {
                 onClick={() => {
                   this.transition('about');
                 }}
-                className="nav-item"
+                className={
+                  this.state.about
+                    ? 'nav-item active hvr-float-shadow'
+                    : 'nav-item hvr-float-shadow'
+                }
               >
                 <Link
                   className={
@@ -90,7 +105,7 @@ export default class Nav extends Component {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item hvr-float-shadow">
                 <a
                   className={
                     this.state.black ? 'nav-link' : 'nav-link color-black'
@@ -103,6 +118,36 @@ export default class Nav extends Component {
             </ul>
           </div>
         </nav>
+        <div className="socials">
+          <ul>
+            <li>
+              <a
+                className={
+                  this.state.black
+                    ? 'color-white hvr-float-shadow'
+                    : 'color-black hvr-float-shadow'
+                }
+                target="blank"
+                href="https://github.com/MichaelSParkin3"
+              >
+                <i className="fab fa-github" />
+              </a>
+            </li>
+            <li className="linkedIn">
+              <a
+                className={
+                  this.state.black
+                    ? 'color-white hvr-float-shadow'
+                    : 'color-black hvr-float-shadow'
+                }
+                target="blank"
+                href="https://www.linkedin.com/in/michael-parkin-702396133/"
+              >
+                <i className="fab fa-linkedin-in" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
@@ -110,12 +155,25 @@ export default class Nav extends Component {
   //transition from route to route
   transition(path) {
     console.log(path);
+    if (path == 'about') {
+      this.setState({ about: true });
+      this.setState({ projects: false });
+      this.setState({ home: false });
+    } else if (path == 'projects') {
+      this.setState({ about: false });
+      this.setState({ projects: true });
+      this.setState({ home: false });
+    } else if (path == 'home') {
+      this.setState({ about: false });
+      this.setState({ projects: false });
+      this.setState({ home: true });
+    }
     if (path == 'about' && this.state.black == true) {
-      this.props.navChange();
+      this.props.navChange(path);
     } else if (path == 'projects' && this.state.black == false) {
-      this.props.navChange();
+      this.props.navChange(path);
     } else if (path == 'home' && this.state.black == true) {
-      this.props.navChange();
+      this.props.navChange(path);
     }
   }
 

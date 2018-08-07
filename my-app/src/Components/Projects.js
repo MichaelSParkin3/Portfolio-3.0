@@ -1,10 +1,49 @@
 import React, { Component } from 'react';
 
 export default class Projects extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      black: false,
+      home: false,
+      about: false,
+      projects: false
+    };
+  }
   render() {
     return (
       <div className="black-slider">
-        <div className="projects">
+        <div className="projects projects-mobile">
+          <div>
+            <h3>Ecommerce Site</h3>
+            <a
+              target="_blank"
+              href="https://ecommerce-react-app.herokuapp.com/home"
+            >
+              Visit Site
+            </a>
+          </div>
+          <div>
+            <h3>Rent a Bike</h3>
+            <a
+              target="_blank"
+              href="https://rent-a-bike-react.herokuapp.com/landing"
+            >
+              Visit Site
+            </a>
+          </div>
+          <div>
+            <h3>My Movie List</h3>
+            <a
+              target="_blank"
+              href="https://movie-app-react-redux.herokuapp.com/main"
+            >
+              Visit Site
+            </a>
+          </div>
+        </div>
+        <div className="projects projects-pc">
           <div
             id="carouselExampleControls"
             className="carousel slide fadeIn"

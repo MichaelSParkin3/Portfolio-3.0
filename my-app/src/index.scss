@@ -299,6 +299,9 @@ body {
               color: #fff;
               font-family: 'Roboto Slab', serif;
             }
+            .code-link {
+              margin-left: 50px;
+            }
           }
         }
       }
@@ -509,6 +512,9 @@ body {
   }
 }
 @media screen and (max-width: 900px) {
+  .code-link {
+    margin-left: 30px;
+  }
   .app {
     nav {
       background-color: #fff !important;

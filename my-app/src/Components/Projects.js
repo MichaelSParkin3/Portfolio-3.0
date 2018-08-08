@@ -23,6 +23,13 @@ export default class Projects extends Component {
             >
               Visit Site
             </a>
+            <a
+              className="code-link"
+              target="_blank"
+              href="https://github.com/MichaelSParkin3/Ecommerce-React"
+            >
+              See Code
+            </a>
           </div>
           <div>
             <h3>Rent a Bike</h3>
@@ -32,6 +39,13 @@ export default class Projects extends Component {
             >
               Visit Site
             </a>
+            <a
+              className="code-link"
+              target="_blank"
+              href="https://github.com/MichaelSParkin3/Rent-A-Bike"
+            >
+              See Code
+            </a>
           </div>
           <div>
             <h3>My Movie List</h3>
@@ -40,6 +54,13 @@ export default class Projects extends Component {
               href="https://movie-app-react-redux.herokuapp.com/main"
             >
               Visit Site
+            </a>
+            <a
+              className="code-link"
+              target="_blank"
+              href="https://github.com/MichaelSParkin3/MyMovieList"
+            >
+              See Code
             </a>
           </div>
         </div>
@@ -78,6 +99,13 @@ export default class Projects extends Component {
                       >
                         Visit Site
                       </a>
+                      <a
+                        className="code-link"
+                        target="_blank"
+                        href="https://github.com/MichaelSParkin3/Ecommerce-React"
+                      >
+                        See Code
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -108,6 +136,13 @@ export default class Projects extends Component {
                         href="https://rent-a-bike-react.herokuapp.com/landing"
                       >
                         Visit Site
+                      </a>
+                      <a
+                        className="code-link"
+                        target="_blank"
+                        href="https://github.com/MichaelSParkin3/Rent-A-Bike"
+                      >
+                        See Code
                       </a>
                     </div>
                   </div>
@@ -144,6 +179,13 @@ export default class Projects extends Component {
                         href="https://movie-app-react-redux.herokuapp.com/main"
                       >
                         Visit Site
+                      </a>
+                      <a
+                        className="code-link"
+                        target="_blank"
+                        href="https://github.com/MichaelSParkin3/MyMovieList"
+                      >
+                        See Code
                       </a>
                     </div>
                   </div>
